@@ -1,18 +1,18 @@
 #include <LiquidCrystal.h>
 
 // LCD (RS, E, D4, D5, D6, D7)
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+LiquidCrystal lcd(9, 8, 10, 11, 12, 13);
 
 // Botones
-int boton1 = 9;
-int boton2 = 10;
+int boton1 = 2;
+int boton2 = 4;
 
 // LEDs
-int led1 = 6;
-int led2 = 7;
+int led1 = 3;
+int led2 = 5;
 
 // Buzzer
-int buzzer = 8;
+int buzzer = 6;
 
 // Beep normal
 void beep() {
@@ -69,8 +69,6 @@ void loop() {
     
     lcd.clear();
     lcd.print("Ejecucion terminada");
-    beep();
-    notaMi();
     delay(1000);
 
     digitalWrite(led1, LOW);
